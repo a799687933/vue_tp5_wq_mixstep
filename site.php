@@ -46,10 +46,10 @@ public function doWebMore_config()
     {
           global $_W, $_GPC;
           include "template/header.html";
-          $a=M('modules')->select();
-           $c=new Hello();
-           $b=$c->index();
-          var_dump($b);
+          //$a=M('modules')->select();
+          // $c=new Hello();
+           //$b=$c->index();
+          //var_dump($b);
           include "template/index.html";
 	}
 

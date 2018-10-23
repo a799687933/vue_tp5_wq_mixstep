@@ -25,8 +25,6 @@ class Hello extends Common
         echo'666';
         return resultArray(['data' => $data]);
     	//var_dump(66);die;
-         
-       
     }
 }
 ?>
