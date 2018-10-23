@@ -19,13 +19,14 @@ class Hello extends Common
        //$obj = new \weiqing\weiqing();
          
        //$obj->test();
-    	$data['SYSTEM_NAME']=111;
+    	$data['SYSTEM_NAME']=1123;
     // return $this->success('登录成功');
      //$this->redirect('https://www.baidu.com/');
+        echo'666';
         return resultArray(['data' => $data]);
     	//var_dump(66);die;
-         // echo'666';
-        return $this->fetch('hello/index');
+         
+       
     }
 }
 ?>

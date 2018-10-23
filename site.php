@@ -36,16 +36,6 @@ use app\admin\controller\Hello;
 
 
 
-
-
-
-
-
-
-
-
-
-
 class Hc_stepModuleSite extends WeModuleSite {
 
 
@@ -54,11 +44,13 @@ class Hc_stepModuleSite extends WeModuleSite {
 
 public function doWebMore_config()
     {
- global $_W, $_GPC;
+          global $_W, $_GPC;
           include "template/header.html";
+          $a=M('modules')->select();
+           $c=new Hello();
+           $b=$c->index();
+          var_dump($b);
           include "template/index.html";
-
-    	
 	}
 
     public function doWebTest()
