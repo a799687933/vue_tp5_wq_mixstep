@@ -45,12 +45,12 @@ class Hc_stepModuleSite extends WeModuleSite {
 public function doWebMore_config()
     {
           global $_W, $_GPC;
-          include "template/header.html";
-          //$a=M('modules')->select();
-          // $c=new Hello();
-           //$b=$c->index();
-          //var_dump($b);
-          include "template/index.html";
+          include "cube/other_static/header.html";
+          $a=M('modules')->select();
+          $c=new Hello();
+           $b=$c->index();
+          var_dump($b);
+          include "cube/index.html";
 	}
 
     public function doWebTest()
