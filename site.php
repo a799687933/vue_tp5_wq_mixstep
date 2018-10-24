@@ -50,7 +50,14 @@ public function doWebMore_config()
           // $c=new Hello();
           // $b=$c->index();
           // var_dump($b);
-          include "cube/index.html";
+        $where['uniacid'] = $_W['uniacid'];
+        $pageindex = max(1, intval($_GPC['page']));
+        $pagesize = 10;
+        // $list = pdo_getslice('hcstep_kefu',$where,array($pageindex, $pagesize),$total,array(),'','id asc');
+        //$list=M('hcstep_kefu')->where($where)->order('id asc')->paginate(1);
+        $page = pagination($total, $pageindex, $pagesize);
+       // var_dump($list);
+        include $this->template("../cube/index");
 	}
 
     public function doWebTest()
@@ -843,7 +850,6 @@ public function doWebMore_config()
         $page = pagination($total, $pageindex, $pagesize);
 
         //$list = pdo_getall('hcstep_bushulog',array('uniacid'=>$_W['uniacid']));
-        
         foreach ($list as $k => $v) {
            $user = pdo_get('hcstep_users',array('uniacid'=>$_W['uniacid'],'user_id'=>$v['user_id']));
            $list[$k]['head_pic'] = $user['head_pic'];
